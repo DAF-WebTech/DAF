@@ -1,0 +1,80 @@
+/*==---------------------------------------------------------====
+    Homepage Banner
+====---------------------------------------------------------==*/
+    .banner {
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: cover;
+        position: relative;
+        height: 230px; 
+        position:relative;
+        color: black;
+        
+        &:before {
+        	position: absolute;
+            bottom: 0px;
+            right: 0;
+            height: 30px;
+            width: 20%;
+            background-color:$color-white;
+            content: '';
+        }
+        
+        &:after {
+        	position: absolute;
+            bottom: 0px;
+            right: 20%;
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+            border-right-color:$color-white;
+            border-bottom-color:$color-white;
+            content: '';
+        }
+    }
+
+    .ba-landing .banner::before {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        height: 30px;
+        width: 20%;
+        background-color: $color-white;
+        content: '';
+    }
+    .ba-landing .banner::after {
+        position: absolute;
+        bottom: 0px;
+        right: 20%;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-right-color: $color-white;
+        border-bottom-color: $color-white;
+        content: '';
+    }
+/*==---------------------------------------------------------====
+   Media Queries
+====---------------------------------------------------------==*/
+
+@include respond(tablet){
+    .banner { 
+            height: 330px; 
+            background-position: 0 0;
+            
+        &:before {
+            background-color:$color-grey-light;
+        }
+        
+        &:after {
+            border-right-color:$color-grey-light;
+            border-bottom-color:$color-grey-light;
+        }
+    }
+}
+
+@include respond(stand-desk){
+    .banner { 
+        height: 430px;
+    }
+}

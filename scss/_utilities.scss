@@ -1,0 +1,128 @@
+/*==---------------------------------------------------------====
+   General - Site Utilities | Tooltip | Skip Links 
+====---------------------------------------------------------==*/
+
+footer ul.footer-links:before{
+    content: " ";
+    display: table;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+
+.visuallyhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted $color-black;
+    
+    span.tooltiptext {
+        visibility: hidden;
+        width:auto;
+        background-color:$color-grey-dark-1;
+        color: #fff;
+        text-align: center;
+        padding: 0.5rem;
+        position: absolute;
+        z-index: 1;
+        bottom: -155%;
+        left: 50%;
+        margin-left: -70px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 1.3rem;
+        line-height: 1.425;
+        border-radius: 5px;
+    
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: -32%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #303433;
+        }
+    }
+    
+    &:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/*==---------------------------------------------------------====
+  Skip Links 
+====---------------------------------------------------------==*/
+
+.accessibility{
+	position: absolute;
+	left: -99999px;
+	height: 10px;
+	width: 10px
+}
+
+#skip{
+    position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+    margin-left: 0;
+	text-align: center;
+	list-style: outside none;
+
+
+    li{ 
+        list-style-type: none 
+    }
+}
+
+#skip a{
+	position: absolute;
+	left: -99999px;
+	top: 30px;
+
+    &:focus,
+    &:active{
+    	position: relative;
+        left: 0;
+        z-index: 9999;
+        height: auto;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: underline;
+        background-color: $color-blue-primary;
+        float: left;
+        width: auto;
+        top: 0;
+    }
+}

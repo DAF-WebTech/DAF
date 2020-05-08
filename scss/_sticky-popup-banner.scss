@@ -1,0 +1,36 @@
+// this is for the sticky popup banner
+// goes with the content container template Popup Banner [1462500], see its paint layout → type formats → default format [1462513]
+// and goes with sticky-popup-banner.js [1462608]
+/* Style the header popup banner */
+.popup-sticky-banner {
+	padding: 10px 16px;
+	background: rgb(0, 86, 144); // #555 would have been a nice grey colour, but they wanted blue 
+	color: #f1f1f1;
+	text-align: center;
+	z-index: 20;
+	font-size: 1.25em;
+	display: none;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.popup-sticky-banner a {
+    color:  #f1f1f1;
+    text-decoration: underline;
+}
+.popup-sticky-banner a:visited, .popup-sticky-banner a:hover {
+    color:  #f1f1f1;
+}
+
+
+// this is the close button on the popup header
+.close-popup-sticky-banner {
+	position: absolute;
+	right: 0;
+	padding: 0px 1em 1em 1em;
+	font-size: 1.25em;
+	cursor: pointer;
+}

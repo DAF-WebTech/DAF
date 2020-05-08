@@ -1,0 +1,110 @@
+/*==---------------------------------------------------------====
+    Container | Page Layouts |
+====---------------------------------------------------------==*/
+
+.container{
+    min-width: 19em;
+    max-width: 88em;//82em
+    margin: 0 auto;
+}
+
+#content {
+    padding: 3rem 2rem; // Do Not Change effects the whole site
+    margin-top:4.5rem;// Do Not Change _ Linked to Search Mobile Toggle
+    /*word-break: break-word;*/
+    display:flex;
+    flex-direction:column;
+    
+    #main-content {
+        order:1;
+        min-height: 40vh;
+        
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    aside{
+        order:2;
+    }
+    #section-nav {
+        order:3;
+    }
+    
+}
+
+.content-footer{
+    padding:3rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
+    
+    p{
+       color: $color-font;
+       font-size: 1.4rem;
+       margin: 0;
+     }   
+}
+
+/*==---------------------------------------------------------====
+    Media Queries
+====---------------------------------------------------------==*/
+
+@include respond(tablet){
+    
+    
+}
+
+
+@include respond(stand-desk){
+    #content {
+        margin-top:0rem !important;   // Do Not Change _ Linked to Search Mobile Toggle
+        flex-direction:row;
+        justify-items: flex-start;
+        padding: 3rem 1rem; 
+        
+            #main-content {
+                order:2;
+            }
+            aside{
+                order:3;
+            }
+            #section-nav {
+                order:1;
+            }
+    }
+    
+    #section-nav{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex: 30%;
+        max-width: 280px;
+        /*width: 30%;*/
+        padding-right: 3rem;// Do Not Change effects the whole site
+    }
+    
+    #secondary-content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex: 30%;
+        max-width: 280px;
+        /*width: 30%;*/
+        padding-left: 3rem;// Do Not Change effects the whole site
+    }
+    
+    #main-content {
+        padding: 0.5rem 0;// Do Not Change effects the whole site
+        /* display: flex; */
+        flex-direction: column;
+        flex-grow: 0;
+        flex: 100%;
+        /*max-width: 740px;*/
+        /*width: 100%;*/
+    }
+}

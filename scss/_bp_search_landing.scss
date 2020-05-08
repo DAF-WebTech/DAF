@@ -1,0 +1,82 @@
+/*==---------------------------------------------------------====
+    Business Priorities landing page Search Funnelback profiles 
+====---------------------------------------------------------==*/
+
+/*==----layout 2----==*/
+.bp_search form#global_search {
+  background-color: #efefef;
+  padding: 1rem;
+  margin: 0;
+}
+
+.bp-search-button {
+  padding: 1rem;
+  border-radius: 0;
+  font-size: 1.4rem;
+  margin: 0;
+  height: 34px;
+}
+
+.bp-search-box {
+  border: 1px solid #ccc;
+  width: 175px;
+  height: 34px;
+  font-size: 1.3rem;
+  margin-right: -4px;
+  padding: 0 0rem 0 1rem;
+  vertical-align: top;
+}
+
+#bp_search_wide {
+  width: 96%;
+  display: block;
+  background-color: #efefef;
+  padding: 1rem;
+  margin: 1rem 0 3rem 0;
+
+  form {
+    padding-bottom: 0;
+  }
+
+  .bp-search-box {
+    width: 85%;
+    height: 45px;
+    font-size: 1.6rem;
+  }
+
+  .bp-search-button {
+    height: 45px;
+    width: 15%;
+    font-size: 2.5rem;
+  }
+}
+
+
+@include respond(tablet){
+    #bp_search_wide{
+       padding: 1rem;
+     
+        .bp-search-box {
+           width: 92%;
+        }
+        
+        .bp-search-button {
+            width: 8%;
+        }
+    }
+}
+
+@include respond(stand-desk){
+    #bp_search_wide{
+       padding: 2rem 2rem;
+     
+        .bp-search-box {
+           width: 92%;
+        }
+        
+        .bp-search-button {
+            width: 8%;
+        }
+    }
+}
+

@@ -1,0 +1,302 @@
+/*==---------------------------------------------------------====
+   Forms | 
+====---------------------------------------------------------==*/
+.sq-form-section, 
+.sq-form, 
+.sq-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+form{
+    display: block;
+    clear: both;
+    padding-bottom: 2rem;
+
+    .sq-form-required-field,
+    .sq-form-required {
+        color:$color-red;
+        font-size:1.5rem;
+        text-decoration: none;
+    }
+}
+
+.sq-form-section {
+    margin: 2rem 0 1rem;
+    
+    .sq-form-question {
+        padding: 0 2rem;
+        margin: 0.5rem 0em 1rem 0em;
+        clear: both;
+        
+        &:before,
+        &:after{
+            display: table;
+            line-height: 0;
+            content: "";
+        }
+        
+        &-note{
+            clear: left;
+            width: 39%;
+            font-size: 80%;
+            font-style: normal;
+            display: block;
+            margin-bottom: 0.5em;
+            float: left;
+            font-style: italic;
+        }
+        
+        &-title {
+            font-weight: bold;
+            width: 100%;
+            position: relative;
+            margin: 0 !important;
+            padding: 0.5em 0.5em 0.5em 0;
+            display:inline-block;
+            float: left;
+        }
+         
+        &-answer {
+            width: 100%;
+            margin-left: 0%;
+    
+            ul,
+            ol{
+                list-style: none;
+                margin: 0 !important;
+                padding: 0.3em 0 0;
+                display: inline-block;
+                
+                li{
+                    margin: 4px;
+                    display:inline-block;
+                    padding: 0 0 0.5em 0;
+                }
+            }
+            
+             label.error{
+                padding: 0.3em 0 0;
+                display: block;
+                color:$color-red;
+             }
+        }
+        
+        &.sq-form-question-datetime select {
+            width: 70px;
+            min-width: 70px;
+            margin: 0 1em 0 0.25em;
+        }
+        
+        input[type="text"], 
+        input[type="password"], 
+        input[type="tel"], 
+        input[type="email"],
+        input[type="time"],
+        input[type="date"],
+        input[type="month"],
+        textarea,
+        select {
+            outline: none;
+            height: initial !important;
+            padding: 0;
+            border:1px solid $color-grey-light-1;
+            border-radius: 3px;
+            box-shadow: inset 2px 2px 2px $color-grey-light-2;
+            transition: all 0.30s ease-in-out;
+            width: 95%;
+            padding: 6px 8px !important;
+        }
+        
+        input[type="file"] {
+            border:1px solid $color-grey-light-1;
+            background-color: #fff;
+            padding: 4px;
+            width: 95%;
+            box-shadow: inset 2px 2px 2px $color-grey-light-2;
+            width: 95%;
+        }
+        
+        input[type="text"]:focus, 
+        input[type="password"]:focus, 
+        input[type="tel"]:focus, 
+        input[type="email"]:focus, 
+        textarea:focus, 
+        select:focus,
+        input[type="time"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="file"] :focus{
+            box-shadow: 0 0 5px rgba(43,122,43,0.75);
+            border: 1px solid $color-primary-light;
+        } 
+        
+        
+        input[type="text"].error,
+        input[type="password"].error,
+        input[type="tel"].error, 
+        input[type="email"].error,
+        input[type="time"].error,
+        input[type="date"].error,
+        input[type="month"].error,
+        input[type="file"].error,
+        textarea.error,
+        select.error{
+            border-color:$color-red;
+        }
+    }
+    
+    select {
+        min-width: 30%;
+        width: auto;
+        box-sizing:border-box;
+    }
+    
+    textarea {
+        padding: 8px;
+        line-height: 20px;
+    }
+    
+    label {
+        cursor: pointer;
+    }
+    
+    .sq-form-error {
+        color: $color-red;
+        font-size: 1.4rem;
+        text-decoration: none;
+        margin: 0.3rem 0;
+        padding: 0;
+    }
+    
+    fieldset {
+        border: 0 !important;
+        padding: 0;
+        margin: 0;
+    }
+    
+    &-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display:block;
+        margin: 0 0 1rem;
+        width: 100%;
+        border-bottom: 1px solid $color-grey-light-1;
+        padding-bottom: 0.5rem;
+        color: $color-primary;
+    }
+}
+
+#form-container{
+    
+    input[type="text"].hidden{
+        display:none;
+    }
+            
+    input[type="button"], 
+    input[type="submit"], 
+    input[type="reset"]{
+        border: none;
+        padding: 1rem 2rem;
+        color:$color-white;
+        background-color: $color-primary-dark;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-radius: 3px;
+        float: right;
+        display: inline-block;
+        margin: 0 4rem 1rem;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        clear: both;
+    } 
+    
+    input[type="button"]:hover, 
+    input[type="submit"]:hover, 
+    input[type="reset"]:hover{
+        background-color:$color-primary;
+        text-decoration: underline;
+    }
+}
+
+
+
+ /*==---------------------------------------------------------====
+    Testing new style
+====---------------------------------------------------------==*/
+    
+.form-contents {
+    padding: 20px;
+    display: block;
+    font-size: 1.5rem;
+    font-family: "Lato", sans-serif;
+    .required {
+        color: $color-red;
+        font-size: 1.2rem;
+        position: relative;
+        top: -0.6rem;
+    }
+    .form-field-container {
+        margin: 1%;
+        width: 48%;
+        float: left;
+        @media screen and (max-width: 412px) {
+            width: 100%;
+            margin: 0px;
+        }
+        label {
+            display: block;
+        }
+        .sq-form-field {
+            padding: 10px;
+            display: block;
+            width: 100%;
+            font: 400 1.5rem "Lato";
+            @media screen and (max-width: 412px) {
+                width: 100%;
+                margin: 0px;
+            }
+        }
+    }
+    .submit {
+        clear: both;
+        margin: 1%;
+        .sq-form-submit {
+            padding: 1rem 1.5rem;
+            background-color: #0d5901;
+            border: 0;
+            display: inline-block;
+            clear: both;
+            color: #fff;
+            cursor: pointer;
+            margin: 1rem 0;
+            text-decoration: none;
+            transition: all 0.3s;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;            
+        }            
+    }
+}
+    
+    
+
+
+ /*==---------------------------------------------------------====
+Media Queries
+====---------------------------------------------------------==*/
+@include respond(tablet){
+    
+  .sq-form-section {
+      .sq-form-question-title{ width: 39%;}
+  
+      .sq-form-question-answer {
+        width: 59%;
+        margin-left: 39%;
+      }
+  }
+
+}//END Tablet Portrait

@@ -1,0 +1,66 @@
+/*==---------------------------------------------------------====
+MEDIA QUERY MANAGER
+====---------------------------------------------------------==*/
+/*
+0 - 767px:      Default Styles apply
+768 - 1023px:   Tablet 
+1024px +:       standard desktop
+
+
+$breakpoint choices:
+- tablet
+- stand-desk
+
+1em = 16px 
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == tablet{
+        @media only screen and (min-width:48em) { @content };    //768px
+    }
+    
+    @if $breakpoint == ipad{
+        @media all and (max-width:64em) { @content };     //=1024px
+    }
+    
+   @if $breakpoint == stand-desk{
+        @media all and (min-width:64em) { @content };     //>1024px
+    }
+    
+   @if $breakpoint == mobile{
+       @media all and (min-width:26em )  { @content };      //419px
+   }
+}
+
+@mixin social_setup($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (min-width: 320px) and (max-width: 480px) { @content }        
+    }
+    
+    @if $breakpoint == ipad {
+        @media only screen 
+        and (min-device-width : 768px) 
+        and (max-device-width : 1024px) 
+        and (orientation: portrait) 
+        and (-webkit-min-device-pixel-ratio: 1) { @content }              
+    }
+    
+    @if $breakpoint == ipad_landscape {
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { @content }
+    }
+    
+    @if $breakpoint == desktop {
+        @media (min-width: 1025px) and (max-width: 1280px) { @content }
+    }
+    
+    @if $breakpoint == ipad_pro {   
+        @media only screen 
+        and (min-device-width : 768px) 
+        and (max-device-width : 1024px)
+        and (-webkit-min-device-pixel-ratio: 2) { @content }    
+    }
+}
+
+
+        
+
+

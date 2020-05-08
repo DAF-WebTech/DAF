@@ -1,0 +1,204 @@
+/*==---------------------------------------------------------====
+Table Styles - Default | Custom Tables | dl dt Contact Table | Bordered Table
+ ====---------------------------------------------------------==*/
+    .scroll-table{
+        overflow-x:auto;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        margin:1rem 0;
+        word-break: normal;
+    
+        caption {
+            border-bottom: 1px solid $color-grey-light;
+            padding: 0.5rem 0;
+            text-align: left;
+            font-style: italic;
+        }
+
+        th, td {
+            padding:1em;
+            vertical-align: top;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        /*
+        th:last-child,
+        td:last-child {
+            border-bottom: none;
+        }*/
+        td p:first-child,
+        td ul { margin-top: 0; }
+        td p:last-child { margin-bottom: 0; }
+
+        thead {
+            
+            th {
+                border-bottom: 3px solid $color-primary-dark;
+                color:$color-primary-dark;
+            }
+        }
+    
+        tbody th {
+                border-bottom: 1px solid #ddd;
+        }
+    
+        span.hidden {
+            display: none;
+        }
+    }
+
+    table.blue-header {
+        border-collapse: collapse;
+        width: 100%;
+        border:1px solid $color-blue-dark;
+        
+        td {
+            text-align: left;
+            padding: 1rem;
+        }
+        
+        tr {
+            &:nth-child(even){
+                background-color: rgba(170,203,236,0.2);
+            }
+            
+            &:last-child>td {
+                border-bottom:none;
+            }
+        }
+        
+        th {
+            background-color: $color-blue-dark;
+            color:$color-white;
+            text-align: left;
+            padding: 1rem;
+            border-bottom:0 none;
+        }
+    }
+
+    table.green-header {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid $color-grey-light;
+    
+        th, td {
+            text-align: left;
+            padding:1rem;
+        }
+    
+        tr:nth-child(even) {background-color:rgba(204,204,204,0.2);}
+    
+        th {
+            background-color:$color-white;
+            color:$color-primary;
+            border-bottom: 3px solid $color-primary;
+        }
+    
+        tr:hover { background-color:rgba(204,204,204,0.2); }
+    }
+
+    .row-col-header{
+        border-collapse: collapse;
+        width: 100%;
+        margin:2rem 0;
+    
+        caption {
+            border-bottom: 1px solid $color-grey-light;
+            padding: 0.5rem 0;
+            text-align: left;
+            font-style: italic;
+        }
+
+        th,td {
+            padding:1rem;
+            text-align: left;
+            border-bottom: 1px solid $color-grey-light;
+        }
+    
+        tr:first-child th:first-child{
+            background-color:$color-grey-light;
+            color:$color-primary-dark;
+        }
+    
+        thead,
+        tbody {
+            
+           th {
+             background-color:$color-grey-light;
+             color:$color-primary-dark;
+             border: 0 none;
+            }
+        }
+    }
+
+
+.contact dl {
+    display: block;
+    position: relative;
+    margin: .5rem 0 1rem 11rem;
+    
+    dt {
+        position: absolute;
+        left: -13rem;
+        width: 12rem;
+        font-weight: normal;
+    }
+    
+    dt,
+    dd {
+        margin: 0;
+        padding: .25rem 0;
+        margin-left: 2rem;
+    }
+    
+    .type {
+        display: none;
+    }
+    
+    .street-address{
+        display:block;
+    }
+}
+
+
+table.table-borders{
+    border-collapse: collapse;
+    margin:1rem 0;
+    /*word-break: break-all;*/
+    
+    caption {
+        border-bottom: 1px solid $color-grey-light-1;
+        padding: 0.5rem 0;
+        text-align: left;
+        font-style: italic;
+    }
+
+
+    th,td {
+        padding:1rem;
+        text-align: left;
+        border: 1px solid $color-grey-light-1;
+        min-width: 2rem;
+    }
+
+    thead{
+        
+       th{
+         background-color:$color-primary-dark;
+         color:$color-white;
+        }
+    }
+    
+    
+    tbody th{
+        border-bottom: 1px solid $color-grey-light-1;
+        
+    }
+    
+    span.hidden {
+        display: none;
+    }
+}

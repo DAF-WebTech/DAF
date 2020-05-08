@@ -1,0 +1,168 @@
+/*==---------------------------------------------------------====
+    Search Layout
+====---------------------------------------------------------==*/
+    .search-container input[type="text"], 
+    .search-container select {
+        outline: none;
+        height: initial !important;
+        padding: 0;
+        border:1px solid $color-grey-light-1;
+        border-radius: 3px;
+        box-shadow: inset 2px 2px 2px $color-grey-light-2;
+        transition: all 0.30s ease-in-out;
+        width: 100%;
+        padding: 6px 8px !important;
+    }
+
+    @media (min-width: 750px) {
+        .search-container {
+            display: flex;
+        }
+    
+        .search-content {
+            padding: 0.5rem 0;
+            flex-grow: 1; 
+            flex-shrink: 0;
+            width: 70%;
+        }
+        
+        .search-aside {
+            display: flex;
+            flex-direction: column;
+            margin-left:4rem;
+            flex-grow: 1; 
+            flex-shrink: 0;
+            width: 20%;
+        }
+    }
+
+    
+/*==---------------------------------------------------------====
+    Search Panel
+====---------------------------------------------------------==*/
+    #search-panel {
+        border: 1px solid #e6e6e6;
+        background-color: #f6f6f6;
+        padding: 1.5em 1.5em 1em 1.5em;
+        margin-bottom: 2em;
+        
+        .searchform {
+            padding: 0;
+        }
+        .search-bar {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5em;
+        }
+        .search-bar input {
+            width: 100%;
+            margin-right: 0.5em;
+            font-size: inherit;
+            line-height: 1;
+            padding: 0.5em 1em !important;
+        }
+        .search-bar button {
+            margin: 0;
+            padding: 0.6em 1em !important;
+            white-space: nowrap;
+            line-height: 1;
+            text-decoration: none;
+        }
+        select {
+            width: auto;
+            margin-right: 0.5em;
+            font-size: inherit;
+            line-height: 1;
+            padding: 0.44em 1em !important;
+        }
+        fieldset {
+            border-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .site-select input[type="radio"] {
+            margin-left: 0.75em
+        }
+        label {
+            cursor: pointer;
+        }
+    }
+
+/*==---------------------------------------------------------====
+    Search Pagination
+====---------------------------------------------------------==*/
+    .search-container .pagination {
+        justify-content: center;
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        margin: 1em 0 2em 0;
+    
+        li {
+            margin: 0 0.25em;
+            border: 1px solid #ccc;
+            border-radius: 3px; 
+        }
+        a {
+            display: block;
+            padding: 0.25em 0.75em;
+            color: #0d5901;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #f6f6f6;
+        }
+        .active {
+            border-color: #093e00;
+        }
+        .active a {
+            background-color: #0d5901;
+            color: #fff;
+        }
+    }
+
+    #search-panel .site-select {
+        padding-left: 1.15em;
+    }
+
+/*==---------------------------------------------------------====
+    Search Results
+====---------------------------------------------------------==*/
+    .search-container .search-results {
+        list-style-type: none;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        li {
+            border-bottom: 1px dashed #ddd;
+            padding: 1em;
+        }
+        .meta {
+            margin: 0;
+        }
+        .resURL {
+            font-size: 0.85em;
+            line-height: 1.3em;
+            display: block;
+            color: #555;
+        }
+    }
+    .search-container .resultset-title {
+        color: #555;
+    }
+    .result-title a {
+        line-height: 1.3em;
+    }
+
+    @media (min-width: 750px) {
+        .search-container .search-results li {
+            padding: 1.5em;
+        }
+    }
+
+/*==---------------------------------------------------------====
+    Search Aside
+====---------------------------------------------------------==*/
+    #fb-contextual-navigation h2 {
+        margin-bottom: 1em;
+    }

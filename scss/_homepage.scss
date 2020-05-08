@@ -1,0 +1,207 @@
+/*==---------------------------------------------------------====
+    Homepage | Our Vision | Whats Happening | I'm Looking for 
+====---------------------------------------------------------==*/
+.daf-vison{
+    display:none;
+}
+
+.whats-happening-panel {
+        padding: 2rem 0 2rem 0.5rem;
+        
+    &.col-4 ul li {
+        width: 100% !important;
+    }
+
+    ul.whats-happening {
+        list-style-type: none;
+        padding: 0;
+        margin:0 !important;
+        overflow: visible;
+        
+        li{
+            &:not(:last-child){ 
+                border-bottom: 1px dashed $color-grey-light-1;
+            }
+            
+            a{
+                text-decoration: none;
+                display: block;
+                padding: 8px 15px 8px 0;
+            }
+            
+            .whats-happening-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                
+                img{
+                    width:100%;
+                }
+            }
+        }
+        
+        li.selected {
+                font-weight: bold;
+                 
+            .whats-happening-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: none;
+            }
+        }
+    }
+}
+
+.looking-for-module {
+    background-color: rgba(92,82,70,0.9);
+    padding: 2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    height: fit-content;
+    
+    &.col-4 ul li {
+        width: 100% !important;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 !important;
+        
+        li{
+
+            &:not(:last-child){ 
+                border-bottom: 1px solid $color-grey-light-1;
+            }
+            
+            a{
+                color: $color-white;
+                padding:0.5rem 0;
+                display: block;
+            }
+            
+            &:hover{
+                
+                a{
+                    font-weight:bold;
+                    text-decoration: none;
+                    
+                     &:before{
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        font-size: 1.4rem;
+                        content: '\f061';
+                        padding-right: 1rem;
+                        color:$color-gold;
+                        text-decoration: none;
+                     }
+                }
+            }
+        }
+    }
+}
+
+
+.daf-whats-happening-quicklinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: flex-start;
+    flex-direction:column;
+    padding: 1.5rem 0.5rem;
+    
+    .daf-whats-happening {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 75%;
+        width: 100%;
+    }
+    .daf-quicklinks {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 25%;
+        width: 100%;
+        margin-top: -1.5rem;
+    }
+}
+
+/*==---------------------------------------------------------====
+Media Queries
+====---------------------------------------------------------==*/
+
+@include respond(tablet){
+    .daf-vison{
+        background-color: $color-grey-light;
+        padding:3rem 2rem 2rem 2rem;
+        display:block;
+    }
+
+    .daf-intro-text{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 1rem;
+    
+        
+        h3{
+            color: $color-primary-dark;
+            font-style: italic;
+            font-weight: 400;
+            margin-right: 3rem;
+            line-height: 1.4;
+        }
+        
+        ul{
+            display: flex;
+            align-self: flex-start;
+            list-style-position: outside;
+            margin: 0;
+            padding: 0;
+            
+             li {
+                padding-right: 1rem;
+                font-style: italic;
+                list-style:none;
+                
+                &:not(:last-of-type){
+                    margin-right: 2rem;
+                }
+                
+                &:before {
+                    content: "\2022";
+                    color: $color-primary-light;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 2rem;
+                }
+            }
+        }
+    }   
+    
+    //Whats Happening Section
+    
+    .whats-happening-panel {
+
+        ul.whats-happening {
+            position: relative;
+            padding: 0 1.5rem 0 33.33333333%;
+            
+            
+            li.selected {
+            
+                .whats-happening-image {
+                    	display: block;
+                        overflow: hidden;
+                        width: calc(33.33333333% - 20px);
+                }
+            
+            }
+        }
+    }
+    
+    .daf-whats-happening-quicklinks {
+            flex-direction:row;
+    }
+}

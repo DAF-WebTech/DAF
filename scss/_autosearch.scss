@@ -1,0 +1,22 @@
+/*==---------------------------------------------------------====
+   Asides
+====---------------------------------------------------------==*/
+
+div.ui-helper-hidden-accessible {
+    display: none;
+}
+
+ul#ui-id-1 {
+    background-color: $color-white;
+    padding: 1rem;
+    list-style-type: none;
+    border-top: 3px solid #f2f2f2;
+    border-left: 10px solid #f2f2f2;
+    width: 90%;
+}
+
+@include respond(stand-desk){
+    ul#ui-id-1 {
+        width: 255px;
+    }
+}

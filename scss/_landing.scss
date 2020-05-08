@@ -1,0 +1,268 @@
+/*==---------------------------------------------------------====
+    Landing Pages
+====---------------------------------------------------------==*/
+    .landing_info_image {
+        float: left;
+        margin-right: 0;
+        margin-bottom: 2rem;  
+        display: none;
+        
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .landing_info_text {
+        margin-bottom: 2rem;
+    }
+
+    ul.landing-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        padding: 0;
+        
+        li.landing-list-item {
+            margin: 1rem 0;
+            padding: 0.5rem 0 0.5rem 2rem;
+            border-left: 6px solid $color-grey-light-1;
+            
+            a:first-child {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            
+            &:hover,
+            &:focus{
+                border-left: 6px solid $color-blue-primary;
+                background-color: #f2f2f2;
+                transition:background-color 0.1s;
+            }
+            
+            i.expand {
+                position: relative;
+                width: 3rem;
+                height: 3rem;
+                float: right;
+                cursor: pointer;
+                display: inline-block;
+                background-color: $color-blue-primary;
+                
+                span::before, 
+                span::after {
+                    position: absolute;
+                    content: '';
+                    background-color:$color-white;
+                    transition: transform .2s;
+                }
+                span::after {
+                    width: 2px;
+                    height: 10px;
+                    left: 14px;
+                    top: 11px;
+                }
+                span::before {
+                    width: 10px;
+                    height: 2px;
+                    top: 15px;
+                    left: 10px;
+                }
+                
+                &.open span::before {
+                    transform: rotate(180deg);
+                }
+                
+                &.open span::after {
+                    transform: rotate(450deg);
+                }
+            }
+            
+            ul.sub-landing-list {
+                list-style: none;
+                margin: 1.5rem 0 0 0;
+                padding: 0;
+                display: none;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                align-content: flex-end;
+                
+                li {
+                    line-height: 1;
+                    display: flex;
+                    padding: 0 1rem 0rem 1rem;
+                    margin: 0 0 1.5rem 0;
+                    border-left: 2px solid $color-grey-light-1;
+                    
+                    a {
+                        font-size: initial;
+                        font-weight: 500;
+                        width: 100%;
+                    }
+                    
+                    &:hover,
+                    &:focus {
+                        border-left: 2px solid $color-blue-primary;
+                    }
+                }
+            }
+        }
+        
+        @include respond(tablet) {
+            ul.sub-landing-list li {
+                width: 33.333333333333%;
+            }
+        }
+    
+        li.landing-list-item.expandable a {
+            font-size: 1.8rem;
+            font-weight: 600;
+            //display: flex;
+        }
+    
+        p.more-link {
+            position:relative;
+            display: none;
+        
+            a:link,
+            a:visited {
+                color:$color-red;
+                display: inline-flex;
+            }
+        
+            &:after {
+                font-family: "Font Awesome 5 free";
+                font-weight: 900;
+                content: "\f0da";
+                font-size: 2rem;
+                padding:0 0.5rem;
+                vertical-align: middle;
+                text-decoration: none;
+                color:$color-red;
+            }
+        }
+    }
+
+/*==---------------------------------------------------------====
+    Child Landing Pages
+====---------------------------------------------------------==*/
+    .child-landing-list ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top:2rem;
+        padding:0;
+        
+        li {
+            margin: 0 1.5em 1.5em 0;
+            padding: 0.25em 0;
+
+            h3 {
+                line-height: 1.3;
+                margin-bottom: 0;
+            }
+            
+            a {
+                display: block;
+                text-decoration: underline;
+            }
+            p {
+                margin: 0.75em 0 0 0;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    @include respond(tablet) {
+        .child-landing-list ul li {
+            padding: 0.25em 1em;
+            width: 46%;
+        }
+    }
+
+
+/*==---------------------------------------------------------====
+    Business Landing Pages
+====---------------------------------------------------------==*/
+    .business_landing {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        
+        /*  p {
+            flex-grow: 1; 
+            flex-shrink: 0; 
+            flex-basis: 45%; 
+            align-content: flex-start;
+            margin: 0 0 2rem 0;
+        } */
+        
+    }
+
+/*==---------------------------------------------------------====
+   Media Queries
+====---------------------------------------------------------==*/
+    @include respond(tablet) {
+    
+        .landing_info_image {
+            margin-bottom:0;
+            margin-right: 2rem;
+            width: 33rem;
+            display: block;
+        }
+        .landing_info_text {
+            margin-bottom:0;
+        }
+        
+        ul.landing-list {
+            
+            li.landing-list-item {
+                
+                i.expand {
+                     display:none;
+                 }
+                 
+                ul.sub-landing-list {
+                    display:flex !important;
+                    
+                    li{
+                        display: inline-flex;
+                    }
+                }
+            }
+            p.more-link {                                                                                              
+                display: inline-block !important;
+            }
+        }
+        .child-landing-list ul{
+            flex-direction: row;
+        }
+        .business_landing {
+            flex-direction:row;
+            
+        }
+    }
+    
+/*==---------------------------------------------------------====
+   Communique landing page
+====---------------------------------------------------------==*/    
+    
+.communique-listing {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.communique-listing li:not(:last-child) {
+    border-bottom: 1px dotted #aaa;
+}
+
+.communique-listing li {
+    font-size: 14px;
+    padding: 1em 0;
+}

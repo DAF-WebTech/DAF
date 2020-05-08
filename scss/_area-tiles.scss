@@ -1,0 +1,126 @@
+/*==---------------------------------------------------------====
+    Area Tiles | Columns Width |
+====---------------------------------------------------------==*/
+    .area-tile-panel {
+        background-color: #f6f6f6;
+        padding: 0.75em 0;
+        margin: 0;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .area-tiles {
+    	list-style-type: none;
+        margin: 0;
+        padding: 0 1rem;
+        background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        
+        &.col-4,
+        &.col-3,
+        &.col-2,
+        &.col-1 { width: 100%; }
+
+        .area-tile {
+            display: flex;
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+            box-shadow: inset 0 0 0 1px #ddd;
+            overflow: hidden;
+            margin: 0 !important;
+
+            p {
+    	        margin: 0;
+            }
+            a {
+                padding: 15px 15px 15px 30px;
+                text-decoration: none;
+            	display: block;
+                width: 100%;
+                color: #111;
+                background-color: transparent;
+                transition: all 0.1s ease;
+            }
+            a:hover {
+            	background-color: #9f8757;
+                color: #fff;
+            }
+            a:hover .foreground span { 
+                color: #fff;
+            }
+            a:hover .background {
+                opacity: 0.18;
+            }
+
+            h2 {
+            	font-weight: 600;
+                font-size: 1.7rem;
+            }
+            .foreground {
+                position: relative;
+                z-index: 5;
+            }
+            .foreground span {
+            	font-size: 4rem;
+                display: block;
+                margin-bottom: 15px;
+                color: #ccc;
+            }
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.1s ease;
+            }
+            .background span {
+                position: absolute;
+                font-size: 22.5rem;
+                top: -15%;
+                right: 2rem;
+                color: #fff;
+            }
+        }
+        
+        &.col-2 li,
+        &.col-3 li,
+        &.col-4 li,
+        &.col-5 li { width: 100%; }
+    }
+
+/*==---------------------------------------------------------====
+   Media Queries
+====---------------------------------------------------------==*/
+    @include respond(tablet){
+        .area-tiles {
+            margin: 0 !important;
+            padding: 0.5em;
+            
+            &.col-4 { width: 100%; }
+            &.col-3 { width: 75%; }
+            &.col-2  { width: 50%; }
+            &.col-1 { width: 25%; }
+    
+            .area-tile {
+                margin: 0.45em !important;
+                
+                a {
+                    padding: 30px;
+                }
+                > .bg > i {
+                    position: static;
+                    display: block;
+                }
+            }
+       
+            &.col-2 li { width: calc(50% -1em); }
+            &.col-3 li { width: calc(33.33333333333333% - 1em); }
+            &.col-4 li { width: calc(25% - 1em); }
+            &.col-5 li { width: calc(20% - 1em); }
+       }
+    }

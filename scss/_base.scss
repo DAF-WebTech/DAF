@@ -1,0 +1,140 @@
+/*==---------------------------------------------------------====
+    General Styles
+====---------------------------------------------------------==*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; //1rem=10px; 10/16=62.5
+    height: 100%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 150%;
+    color: $color-black;
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    /*font-size: 2rem;*/
+    line-height:2.5rem;
+}
+h3 {
+    /*font-size: 1.8rem;*/
+    line-height: 1.8rem;
+}
+h4 {
+    /*font-size: 1.6rem;*/
+    line-height: 1.6rem;
+}
+h5 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+p {
+    margin: 1em 0;
+}
+
+p+h2,
+p+h3,
+p+h4{
+    margin-top:2.5rem;
+}
+
+ul,
+ol{
+     overflow: hidden;
+}
+
+ul{
+    list-style-type:disc; //default
+}
+ul {
+    &>ul{
+        list-style-type:circle;
+    }
+}
+ul+h2 {
+   margin-top: 3rem;
+}
+ul.square{
+    list-style-type:square;
+}
+ol.upper-roman{
+    list-style-type:upper-roman;
+}
+ol.lower-roman{
+     list-style-type:lower-roman;
+}
+
+ol.upper-alpha{
+     list-style-type:upper-alpha;
+}
+ol.lower-alpha{
+     list-style-type:lower-alpha;
+}
+
+hr{
+    border:1px solid $color-grey-light;
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a.btn:link,
+a.btn:visited{
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: $color-primary-dark;
+    border: 0;
+    display: inline-block;
+    clear: both;
+    color: $color-white;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: all 0.3s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button:hover,
+button:focus,
+a.btn:hover,
+a.btn:focus{
+    background-color: $color-primary;
+    text-decoration: underline;
+}
+
+a:link,
+a:visited{
+    color:$color-blue-primary;
+}
+
+a:hover,
+a:focus{
+    color:$color-blue-dark;
+    text-decoration: underline;
+}

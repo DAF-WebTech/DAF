@@ -1,0 +1,16 @@
+@media print {
+    @page {size: A4;margin:15mm 15mm 16mm 15mm;}
+    #content a[href]:after {content:" (" attr(href) ")";}
+    .container {display: inline;}
+    header {height: 7.5rem;}
+    .header, .header a{color:#000;}
+    .header__department{align-items: center;flex-direction:row;justify-content: space-between;}
+    .header__department__pc-logo, .header__department__mobile-logo{display:none;}
+    .header__department__print-logo{display:block;width:27rem;}
+    .header__search{margin-top:-2rem;}
+    #content{margin-top:0;padding-top:1rem;}
+    #breadcrumb a[href]:after {content:none;}
+    .main__navigation, .site__utilities, #content #section-nav, .black__footer__bar, .green__footer__bar, footer ul.footer-links, #content aside, .header__search__site-search--global, ul.landing-list li.landing-list-item i.expand, .circle-plus .circle, .sidebar-site-utilities {display:none;}
+    ul.landing-list li.landing-list-item ul.sub-landing-list,.accordions-content{display:block !important;}
+    footer{border-top: 1px solid $color-grey-light-1;}
+}

@@ -1,0 +1,228 @@
+/*==---------------------------------------------------------====
+    Social Media - Table 
+====---------------------------------------------------------==*/
+    .social-table {
+        margin-bottom: 2em;
+    
+        th,
+        td {
+            text-align: center;
+        }
+        th:nth-child(1),
+        td:nth-child(1) {
+            text-align: left;
+        }
+    
+        .fab {
+            font-size: 1.5em;
+        }
+        .fa-facebook-f { color: #3b5998; }
+        .fa-twitter { color: #00aced; }
+        .fa-youtube { color: #d00; }
+        .fa-linkedin-in { color: #0077b5; }
+        .fa-instagram { color: #c32aa3; }
+    
+        a {
+            opacity: 1;
+            transition: all 0.15s ease;
+        }
+        a:hover {
+            opacity: 0.75;
+        }
+    }
+    
+
+/*==---------------------------------------------------------====
+    Social Media - Tiles
+====---------------------------------------------------------==*/
+
+    .social-container {
+        width: 100%;
+    } 
+ 
+    #main-content > .social-container {
+        // width: 100vw;
+        // position: relative;
+        // left: 50%;
+        // right: 50%;
+        // margin-left: -50vw;
+        // margin-right: -50vw;
+        // padding: 0 30%;
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            padding: 0 5%;
+        }
+        
+        @include social_setup(ipad) {
+            padding: 0 5%;
+        }
+        
+        @include social_setup(ipad_landscape) {
+            padding: 0 1%;
+        }
+        
+        @include social_setup(mobile){
+            padding: 0;
+        }
+        .social-item {
+            margin: 5px;
+            width: 23.5%;
+            // width: 250px;
+            @media (min-width: 1025px) and (max-width: 1280px) {
+                width: 23.5%;
+                width: 325px;
+            }
+            
+            @include social_setup(ipad) {
+                width: 30%;          
+            }
+            
+            @include social_setup(ipad_landscape) {
+                width: 23.5%;
+            }
+            
+            @include social_setup(mobile){
+                width: calc(100% - 25px);
+            }
+        }
+    }        
+
+    
+    #main-content {
+        .business_landing, {
+            .social-container {
+                .social-item {
+                    width: 234px;
+                    margin: 5px;
+                    @include social_setup(ipad) {
+                        width: 225px;          
+                    }
+    
+                    @include social_setup(ipad_landscape) {
+                        width: 240px;
+                    }
+                
+                    @include social_setup(mobile) {
+                        width: 93%;            
+                    }
+                }
+            }
+        }
+    }
+
+    .container.social-container {
+        padding-top: 20px;
+        h2 {
+            padding-left: 10px;
+        }
+        .social-item {
+            
+            width: 314px;
+            margin: 5px;
+            
+            @include social_setup(mobile) {
+                width: 94%;
+                margin: 5px;            
+            }
+            
+            @include social_setup(ipad_pro) {
+                width: 325px;
+                margin: 5px;          
+            }
+            
+            @include social_setup(ipad) {
+                width: 365px;
+                margin: 5px;           
+            }
+            
+            @include social_setup(ipad_landscape) {
+                width: 320px;
+                margin: 5px;
+            }
+        }
+    }    
+    
+    .social-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5em 0.5em;
+    
+        .social-item {
+            border: 1px solid #ccc;
+            font-size: 0.9em;
+            position: relative;
+            margin: 5px;
+        
+            /* &.facebook { border-top: 6px solid #3B5998; }
+            &.twitter { border-top: 6px solid #38A1F3; }
+            &.youtube { border-top: 6px solid #e00; }
+            &.instagram { border-top: 6px solid #A633B5; } */
+            
+            /* &.facebook { border-top: 6px solid #2b7a2b; }
+            &.twitter { border-top: 6px solid #2b7a2b; }
+            &.youtube { border-top: 6px solid #2b7a2b; }
+            &.instagram { border-top: 6px solid #2b7a2b; } */
+
+            .social-header {
+                padding: 0.75em 1em;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    font-weight: normal;
+                    font-size: 2.2em;
+                    margin-right: 8px;
+                
+                    + .profile-name  {
+                        margin-left: 5px;
+                    }
+                }
+
+                .profile-name {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    color: #111;
+                    line-height: 1.2;
+                }
+            }
+            &.facebook .social-header .icon { color: #3B5998; }
+            &.twitter .social-header .icon { color: #38A1F3; }
+            &.youtube .social-header .icon { color: #e00; }
+            &.instagram .social-header .icon { color: #A633B5; }
+
+            .social-image {
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    transform: scale(1);
+                    transition: all 0.5s ease-out;
+                    display: block;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                }
+            }
+        
+            .profile-image {
+                display: none;
+            }
+            .social-details {
+                padding: 1em 1.3em;   
+            }
+            .post-time {
+                margin: 0;
+                color: #888;
+            }
+            .message {
+                line-height: 1.4;
+                color: #333;
+                margin-top: 0.25em
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        .data-holder {
+            padding: 10px;
+        }
+    }

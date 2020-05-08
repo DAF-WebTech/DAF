@@ -1,0 +1,45 @@
+/*==---------------------------------------------------------====
+    Accordions - Content Template 
+====---------------------------------------------------------==*/
+    .accordion {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 1em 0;
+    
+        .accordion-item {
+            border-bottom: 1px solid #d6d6d6;
+        }
+        .accordion-title {
+            margin: 0;
+            padding: 0.7em 5.25em 0.7em 0.75em;
+            line-height: 1.3;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .accordion-title:hover {
+            color: #005690;
+        }
+        .accordion-content {
+            display: none;
+            padding: 1.5em 2em;
+            background-color: #f6f6f6;
+    
+            p:first-child { 
+                margin-top: 0; 
+            }
+            p:last-child { 
+                margin-bottom: 0; 
+            }
+        }
+        .expand {
+            font-size: 1em;
+            position: absolute;
+            top: 50%;
+            right: 0.75em;
+            transform: translateY(-50%);
+        }
+    }
+    .accordion + .accordion {
+        margin-top: -1em;
+    }
